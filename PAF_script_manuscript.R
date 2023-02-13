@@ -215,7 +215,7 @@ plotARIs(clusMat = merger$currentMat)
 
 #--------------------Create Confusion Matrix Heatmaps to Assess Clustering Similarity-----------------#
 
-cM_rpca_cca <- confusionMatrix(paste0(pf_rseurat_clusters), paste0(pf_c$seurat_clusters))
+cM_rpca_cca <- confusionMatrix(paste0(pf_r$seurat_clusters), paste0(pf_c$seurat_clusters))
 cM_rpca_cca <- cM_rpca_cca / Matrix::rowSums(cM_rpca_cca)
 cM_rpca_cca_plot <- pheatmap::pheatmap(
   mat = as.matrix(cM_rpca_cca), 
